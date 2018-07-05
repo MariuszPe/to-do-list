@@ -1,11 +1,2 @@
-<h1>
-  Welcome to {{ title }}!
-</h1>
-
-<input #inpucik (keydown.enter)= "addTask(inpucik.value)" >
-<button (click)="addTask(inpucik.value)">ADD</button>
-<ul>
-  <li *ngFor="let elemencik of taskList; let indeksik = index">
-    {{elemencik}} <button (click)= "deleteTask(indeksik)">Delete</button>
-  </li>
-</ul>
+<app-input (taskCreated)= 'addTask($event)'></app-input>
+<app-lista [taskList]= 'taskList'(removeTask)='deleteTask($event)'></app-lista>
