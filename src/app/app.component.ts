@@ -13,12 +13,8 @@ export class AppComponent {
     this.taskList.push(task);
   }
 
-  deleteTask(index: number) {
-    this.taskList.splice(index, 1);
+  deleteTask(index: number){
+    this.taskList.splice(index,1);
   }
 
-
-  test() {
-    console.log("sasasa");
-  }
 }
