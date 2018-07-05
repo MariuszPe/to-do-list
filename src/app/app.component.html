@@ -2,7 +2,7 @@
   Welcome to {{ title }}!
 </h1>
 
-<input #inpucik>
+<input #inpucik (keydown.enter) = "addTask(inpucik.value)">
 <button (click)="addTask(inpucik.value)">ADD</button>
 <ul>
   <li *ngFor="let elemencik of taskList; let indexOfList = index">

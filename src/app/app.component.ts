@@ -16,4 +16,9 @@ export class AppComponent {
   deleteTask(index: number) {
     this.taskList.splice(index, 1);
   }
+
+
+  test() {
+    console.log("sasasa");
+  }
 }
